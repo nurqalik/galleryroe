@@ -10,9 +10,9 @@ const Images = async() => {
   });
 
   return (
-    <div className="flex flex-wrap gap-4">
-      {[...images, ...images, ...images].map((image, index) => (
-        <div key={image.id + "-" + index} className="flex w-48 flex-col">
+    <div className="flex flex-wrap gap-4 w-full justify-center md:justify-start">
+      {images.map((image) => (
+        <div key={image.id} className="flex w-48 flex-col">
           <Image
             alt={image.name}
             width={300}
@@ -32,7 +32,7 @@ export default async function HomePage() {
   return (
     <main className="">
       <SignedOut>
-        <div className="h-full w-full text-2xl">Please sign in above</div>
+        <div className="h-full w-full text-2xl text-center">Please sign in above</div>
       </SignedOut>
       <SignedIn>
         <Images />
