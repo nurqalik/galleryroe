@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { getImage } from "~/server/queries";
+import { Modal } from "./modal";
+import FullImages from "~/app/components/full-image-page";
 
-export default async function PhotoModal({
+export default function PhotoModal({
   params: { id: photoId },
 }: {
   params: { id: string };
@@ -9,17 +9,9 @@ export default async function PhotoModal({
   const idAsNumber = Number(photoId);
   if (Number.isNaN(idAsNumber)) throw new Error("Invalid images ID");
 
-  const image = await getImage(idAsNumber);
-
   return (
-    <div>
-      <Image
-        src={image.url}
-        alt={image.name}
-        width={480}
-        height={480}
-        className="w-96 object-cover"
-      />
-    </div>
+    <Modal>
+      <FullImages id={idAsNumber} />
+    </Modal>
   );
 }
