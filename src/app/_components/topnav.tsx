@@ -1,10 +1,12 @@
 "use client";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { UploadButton } from "~/utils/uploadthing";
 
 export const TopNav = () => {
   const router = useRouter();
+  const { user } = useUser();
+  console.log(user?.id)
   return (
     <nav className="ww-full flex items-center justify-between border-b p-4 text-xl font-semibold">
       <div>Gallery</div>

@@ -17,7 +17,7 @@ const Images = async() => {
             alt={image.name}
             width={300}
             height={300}
-            className="aspect-video w-48"
+            className="w-48 object-cover"
             src={image.url}
           />
           <div>{image.name}</div>
