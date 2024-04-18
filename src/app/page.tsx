@@ -10,13 +10,13 @@ const Images = async() => {
   const images = await getImages(); 
 
   return (
-    <div className="flex flex-wrap gap-4 w-full justify-center md:justify-start">
+    <div className="flex flex-wrap gap-4 w-full justify-center">
       {images.map((image) => (
         <div key={image.id} className="flex w-48 flex-col">
           <Image
             alt={image.name}
-            width={300}
-            height={300}
+            width={480}
+            height={480}
             className="w-48 object-cover"
             src={image.url}
           />
