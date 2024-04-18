@@ -1,4 +1,4 @@
-import FullImages from "~/app/components/full-image-page";
+import FullImages from "~/components/full-image-page";
 
 export default function PhotoPage({
   params: { id: photoId },
