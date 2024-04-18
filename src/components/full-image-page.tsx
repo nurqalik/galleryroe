@@ -15,8 +15,8 @@ export default async function FullImages(props: { id: number }) {
         className="flex-shrink object-contain"
       />
       </div>
-      <div className="flex w-48 flex-col flex-shrink-0 border-l">
-        <div className="text-xl font-bold">{image.name}</div>
+      <div className="flex w-48 flex-col flex-shrink-0 border-l gap-2">
+        <div className="text-lg border-b text-center p-2">{image.name}</div>
       </div>
     </div>
   );

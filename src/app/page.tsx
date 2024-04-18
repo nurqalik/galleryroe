@@ -11,7 +11,7 @@ const Images = async() => {
   const images = await getImages(); 
 
   return (
-    <div className="flex flex-wrap gap-4 w-full justify-center">
+    <div className="flex flex-wrap gap-4 w-full justify-center p-4">
       {images.map((image) => (
         <div key={image.id} className="flex w-48 flex-col">
           <Link href={`/img/${image.id}`}>
