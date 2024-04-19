@@ -12,7 +12,7 @@
 - [x] "taint" (server-only) is when you don't want to return spesific data to client such as token and it will guarantee that data will never sending to a client, i don't use taint in this project btw but you can read here: https://nextjs.org/blog/security-nextjs-server-components-actions
 - [x] Use Next/Images components
 - [x] Error management (w/ Sentry)
-- [] Routing/image page (parallel route)
+- [x] Routing/image page (parallel route)
 - [] Delete button (w/ Server Actions)
 - [] Analytics (posthog)
 - [] Ratelimiting (upstash)

@@ -23,7 +23,6 @@ const Images = async() => {
             src={image.url}
           />
           </Link>
-          <div>{image.name}</div>
         </div>
       ))}
     </div>
