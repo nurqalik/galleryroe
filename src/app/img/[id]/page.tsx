@@ -8,5 +8,9 @@ export default function PhotoPage({
   const idAsNumber = Number(photoId);
   if (Number.isNaN(idAsNumber)) throw new Error("Invalid images ID");
 
-  return <FullImages id={idAsNumber} />;
+  return(
+    <div className="w-full h-full">
+      <FullImages id={idAsNumber} />
+    </div>
+  );
 }

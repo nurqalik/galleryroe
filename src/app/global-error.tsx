@@ -7,6 +7,7 @@ import { useEffect } from "react";
 export default function GlobalError(props: { error: unknown }) {
   useEffect(() => {
     Sentry.captureException(props.error);
+    console.log("captured error", props.error);
   }, [props.error]);
 
   return (

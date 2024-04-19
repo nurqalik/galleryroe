@@ -8,7 +8,8 @@ export default async function FullImages(props: { id: number }) {
   const uploaderInfo = await clerkClient.users.getUser(image.userId);
 
   return (
-    <div className="flex h-full w-full min-w-0">
+    <>
+    {image ? <div className="flex h-full w-full min-w-0">
       <div className="shrink w-full flex items-center justify-center">
         <Image
           src={image.url}
@@ -29,6 +30,7 @@ export default async function FullImages(props: { id: number }) {
           <span>{new Date(image.createdAt).toLocaleDateString()}</span>
         </div>
       </div>
-    </div>
+    </div> : null}
+    </>
   );
 }
